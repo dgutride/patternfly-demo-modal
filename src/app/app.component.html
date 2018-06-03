@@ -1,0 +1,15 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+<button (click)="openModal(aboutTemplate)" class="btn btn-default">Launch About Modal</button>
+<ng-template #aboutTemplate>
+  <pfng-about-modal [config]="aboutConfig"
+                    (onCancel)="closeModal($event)">
+    <div>
+      Custom Content
+    </div>
+  </pfng-about-modal>
+</ng-template>
+</div>
